@@ -117,6 +117,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-decoration: none;
         }
 
         .social-link:hover {
@@ -151,18 +152,33 @@
             color: var(--text-color);
         }
 
-        .contact-btn {
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn, .course-btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             color: white;
             text-decoration: none;
             border-radius: 5px;
             transition: transform 0.3s ease;
             font-weight: 500;
+            text-align: center;
         }
 
-        .contact-btn:hover {
+        .contact-btn {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .course-btn {
+            background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+        }
+
+        .contact-btn:hover, .course-btn:hover {
             transform: translateY(-2px);
         }
 
@@ -203,6 +219,14 @@
             .expertise {
                 grid-template-columns: 1fr;
             }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .contact-btn, .course-btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -219,10 +243,11 @@
                 Specializing in MLOps, Generative AI, and scalable AI systems that deliver tangible business outcomes.
             </div>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mobesheli/" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/mobesheli" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:besheli@outlook.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.co.uk/citations?user=hm3nTqgAAAAJ&hl=en" class="social-link" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
             </div>
         </div>
     </header>
@@ -248,7 +273,10 @@
 
         <div class="cta">
             <p>Let's discuss AI-driven transformation, innovative collaborations, or the future of technology.</p>
-            <a href="mailto:your.email@example.com" class="contact-btn">Get in Touch</a>
+            <div class="button-group">
+                <a href="mailto:besheli@outlook.com" class="contact-btn">Get in Touch</a>
+                <a href="https://kodekloud.com/courses/generative-ai-in-practice-advanced-insights-and-operations" class="course-btn" target="_blank" rel="noopener noreferrer">View My Course</a>
+            </div>
         </div>
     </main>
 </body>
